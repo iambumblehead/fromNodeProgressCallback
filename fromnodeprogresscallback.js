@@ -1,5 +1,5 @@
 // Filename: fromnodeprogresscallback.js  
-// Timestamp: 2016.02.04-14:05:20 (last modified)
+// Timestamp: 2016.02.04-14:42:48 (last modified)
 // Author(s): bumblehead <chris@bumblehead.com>  
 //
 // modelled from the source here:
@@ -30,7 +30,8 @@ var fromnodeprogresscallback = module.exports = function (rx, func, ctx, selecto
   }
 
   function progresshandler() {
-    o.onNext.apply([].slice.call(arguments, 0));
+    //console.log('progress handler next ', o.onNext.toString());
+    o.onNext.apply(o, [].slice.call(arguments, 0));
   }
 
   args = args.slice(0, -1);
