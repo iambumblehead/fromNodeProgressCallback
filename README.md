@@ -1,12 +1,11 @@
 fromNodeProgressCallback
 ========================
-**(c)[Bumblehead][0],[JBlashill][6] 2016**
+**(c)[Bumblehead][0] 2016**
 
 Converts a Node.js callback style function and progress function to an observable sequence.
 
-<!--
-The official `rx` library [includes the method][1] `Rx.Observable.fromNodeCallback`, which may be used to convert node.js style callbacks to an observable. `fromnodeprogresscallback` is a modified version of `fromNodeCallback`, whcih is made to use "progress" functions --for example this code which uses the browser xhr progress function:
--->
+
+The official `rx` library [includes the method][1] `Rx.Observable.fromNodeCallback`, which may be used to convert node.js style callbacks to an observable. `fromnodeprogresscallback` is a modified version of `fromNodeCallback` made to use "progress" functions. <!-- --for example this code which uses the browser xhr progress function:-->
 
 
 [0]: http://www.bumblehead.com                            "bumblehead"
@@ -16,7 +15,7 @@ The official `rx` library [includes the method][1] `Rx.Observable.fromNodeCallba
 
 (The MIT License)
 
-Copyright (c) 2012-2016 [Bumblehead][0] <chris@bumblehead.com>
+Copyright (c) 2016 [Bumblehead][0] <chris@bumblehead.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
