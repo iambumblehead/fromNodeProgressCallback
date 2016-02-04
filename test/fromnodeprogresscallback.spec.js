@@ -1,5 +1,5 @@
 // Filename: fromnodeprogresscallback.spec.js  
-// Timestamp: 2016.02.04-14:52:51 (last modified)
+// Timestamp: 2016.02.04-15:20:21 (last modified)
 // Author(s): bumblehead <chris@bumblehead.com>  
 
 var fromnodeprogresscallback = require('../'),
@@ -19,7 +19,7 @@ describe("fromnodeprogresscallback", function () {
             next(--progresscount);
           }, 500);
         } else {
-          completefn(progresscount);
+          completefn(null, progresscount);
         }
       }(5));
     }).subscribe(
@@ -28,9 +28,11 @@ describe("fromnodeprogresscallback", function () {
         ++progresscalls;
       },
       function onerror (e) {
+        console.log('on error');
         progresscalls = -5;
       },
       function oncomplete ()  {
+        console.log('on complete');
         expect(progresscalls).toBe(5);
         done();
       }

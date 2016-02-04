@@ -1,5 +1,5 @@
 // Filename: fromnodeprogresscallback.js  
-// Timestamp: 2016.02.04-15:00:31 (last modified)
+// Timestamp: 2016.02.04-15:19:00 (last modified)
 // Author(s): bumblehead <chris@bumblehead.com>  
 //
 // modelled from the source here:
@@ -18,11 +18,10 @@ var fromnodeprogresscallback = module.exports = function (rx, func, ctx, selecto
     var err = arguments[0];
     if (err) { return o.onError(err); }
 
-    var len = arguments.length, results = [];
-    for(var i = 1; i < len; i++) { results[i - 1] = arguments[i]; }
+    var results = [].slice.call(arguments, 1);
 
     if (rx.helpers.isFunction(selector)) {
-      var results = tryCatch(selector).apply(ctx, results);
+      results = rx.internals.tryCatch(selector).apply(ctx, results);
       if (results === errorObj) { return o.onError(results.e); }
     }
 
