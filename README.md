@@ -2,12 +2,15 @@ fromNodeProgressCallback
 ========================
 **(c)[Bumblehead][0],[JBlashill][6] 2016**
 
-Converts a Node.js callback style function and progress function to an observable sequence
+Converts a Node.js callback style function and progress function to an observable sequence.
 
+<!--
+The official `rx` library [includes the method][1] `Rx.Observable.fromNodeCallback`, which may be used to convert node.js style callbacks to an observable. `fromnodeprogresscallback` is a modified version of `fromNodeCallback`, whcih is made to use "progress" functions --for example this code which uses the browser xhr progress function:
+-->
 
 
 [0]: http://www.bumblehead.com                            "bumblehead"
-
+[1]: https://github.com/Reactive-Extensions/RxJS/blob/master/src/core/linq/observable/fromnodecallback.js
 
 ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png)[![es5 classic][7]][7] 
 
