@@ -1,14 +1,14 @@
 {
-  "name": "fromNodeProgressCallback",
-  "main": "fromNodeProgressCallback",
-  "version": "1.2.0",
+  "name": "fromnodeprogresscallback",
+  "main": "fromnodeprogresscallback",
+  "version": "0.0.1",
   "description": "Converts a Node.js callback style function and progress function to an observable sequence",
   "author": "Chris <chris@bumblehead.com>",
   "license" : "MIT",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iambumblehead/fromNodeProgressCallback.git"
+    "url": "https://github.com/iambumblehead/fromnodeprogresscallback.git"
   },
   "keywords": [
     "reactivex",
